@@ -56,14 +56,14 @@ nnoremap <Leader>fs :update<CR>
 vnoremap v <Esc>
 
 " move {
-  " jump to the start of line
-  nnoremap 1 0
-  " jump to the end of line
-  nnoremap 0 $
-  " jump to the start of line text
-  nnoremap H ^
-  " jump loop in Pairing characters , such '( ... )', '{  }'
-  nnoremap 5 %
+  " jump to the start of line (Normal/Visual)
+  noremap 1 0
+  " jump to the end of line (Normal/Visual)
+  noremap 0 $
+  " jump to the start of line text (Normal/Visual)
+  noremap H ^
+  " jump loop in Pairing characters , such '( ... )', '{  }' (Normal/Visual)
+  noremap 5 %
   " <C-w>H -- 跳转至左方的窗口
   " <C-w>l -- 跳转至右方的窗口
   " <C-w>k -- 跳转至上方的窗口
