@@ -180,6 +180,6 @@ endif
 
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/autocmd.vim'
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/keybindings.vim'
-
+execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/colors.vim'
 let &cpo = s:save_cpo
 unlet s:save_cpo
