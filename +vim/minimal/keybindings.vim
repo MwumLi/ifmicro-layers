@@ -95,3 +95,30 @@ nnoremap <Leader>tp :setlocal paste!<CR>
   nnoremap <Leader>bd :bd<CR>
   nnoremap <Leader>bk :bw<CR>
 " }
+
+" https://github.com/ntpeters/vim-better-whitespace
+" Removes all extraneous whitespace in the file {
+  function! s:StripWhitespace( line1, line2 )
+      " https://github.com/ntpeters/vim-better-whitespace/blob/master/whitespace_examples.txt
+      " Define custom whitespace character group to include all horizontal unicode
+      " whitespace characters. Vim's '\s' class only includes ASCII spaces and tabs.
+      let l:whitespace_group='[\u0009\u0020\u00a0\u1680\u180e\u2000-\u200b\u202f\u205f\u3000\ufeff]'
+      let l:eol_whitespace_pattern = l:whitespace_group . '\+$'
+
+      " Save the current search and cursor position
+      let _s=@/
+      let l = line(".")
+      let c = col(".")
+      " Strip the whitespace
+      silent! execute ':' . a:line1 . ',' . a:line2 . 's/' . l:eol_whitespace_pattern . '//e'
+
+      " Restore the saved search and cursor position
+      let @/=_s
+      call cursor(l, c)
+  endfunction
+
+  " Run :StripWhitespace to remove end of line whitespace
+  command! -range=% StripWhitespace call <SID>StripWhitespace( <line1>, <line2> )
+
+  nnoremap <Leader>xd :StripWhitespace<CR>
+" }

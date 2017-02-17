@@ -155,7 +155,22 @@ set backspace=indent,eol,start " Backspace for dummies
 " cmdline {
   set wildmenu    " 开启 Vim 自身命令行模式智能补全
   set wildmode=list:longest,full " http://vimcdoc.sourceforge.net/doc/options.html#'wildmode'
+  set wildmenu "turn on wild menu
+  set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+  set wildignore+=*DS_Store*
+  set wildignore+=vendor/rails/**
+  set wildignore+=vendor/cache/**
+  set wildignore+=*.gem
+  set wildignore+=log/**
+  set wildignore+=tmp/**
+  set wildignore+=*.png,*.jpg,*.gif
+  set wildignore+=*.so,*.swp,*.zip,*/.Trash/**,*.pdf,*.dmg,*/Library/**,*/.rbenv/**
+  set wildignore+=*/.nx/**,*.app
 " }
+
+
+" Allow changing buffer without saving it first
+set hidden
 
 " other {
   set shortmess=atOI             " 启动时不显示捐助乌干达儿童的提示

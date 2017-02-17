@@ -2,10 +2,15 @@ scriptencoding utf-8
 
 " Put the :hi command after any :colorscheme command,
 " or the colorscheme can overwrite your highlighting.
-silent! color molokai
+if layervim_core#PluginLoaded('tomasr/molokai')
+    silent! color molokai
+    hi CursorLine term=underline ctermbg=232 guibg=#293739
+    hi Visual term=reverse ctermbg=23 guibg=#007173
+endif
 
 " Show trailing white space
 hi ExtraWhitespace guifg=#FF2626 gui=underline ctermfg=198 cterm=underline
+" highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 " Refer to http://vim.wikia.com/wiki/Show_tab_number_in_your_tab_line
@@ -66,7 +71,7 @@ silent! set tabline=%!MyTabLine()
 " %V Virtual column
 " %P Percentage
 " %#HighlightGroup#
-if !layervim_core_config#LayerLoaded('airline') && !layervim_core_config#LayerLoaded('lightline')
+if !layervim_core#LayerLoaded('airline') && !layervim_core#LayerLoaded('lightline')
 
     function! S_buf_num()
         let l:circled_num_list = ['① ', '② ', '③ ', '④ ', '⑤ ', '⑥ ', '⑦ ', '⑧ ', '⑨ ', '⑩ ',
@@ -172,7 +177,7 @@ if !layervim_core_config#LayerLoaded('airline') && !layervim_core_config#LayerLo
         return l:buf_num.l:tot.'%<'.l:fs.l:fp.l:git.l:paste.l:ale_e.l:ale_w.
                     \   '%='.l:m_r_f.l:ff.l:enc.l:pos.l:pct
     endfunction
-    " See the statusline highlightings in s:post_user_config() of core/autoload/layervim_core_config.vim
+    " See the statusline highlightings in s:post_user_config() of core/autoload/layervim_core.vim
 
     " Note that the "%!" expression is evaluated in the context of the
     " current window and buffer, while %{} items are evaluated in the
