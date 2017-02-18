@@ -2,3 +2,5 @@
 
 " More theme: http://vimcolors.com/
 Plugin 'tomasr/molokai'
+
+Plugin 'MwumLi/vimdoc-cn'
