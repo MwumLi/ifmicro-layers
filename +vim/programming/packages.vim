@@ -10,4 +10,8 @@ Plugin 'Raimondi/delimitMate'
 " vim8 async
 Plugin 'skywind3000/asyncrun.vim', { 'on': ['AsyncRun!', 'AsyncRun'] }
 
+" comment your code
 Plugin 'scrooloose/nerdcommenter', { 'on': '<Plug>NERDCommenterToggle' }
+
+" format your code
+Plugin 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }

@@ -67,3 +67,9 @@ if layervim_core#PluginLoaded('scrooloose/nerdcommenter')
   omap <Leader>;; <Plug>NERDCommenterToggle
   vmap <Leader>;; <Plug>NERDCommenterToggle
 endif
+
+" https://github.com/Chiel92/vim-autoformat#default-formatprograms
+if layervim_core#PluginLoaded('Chiel92/vim-autoformat')
+  let g:autoformat_autoindent = 0
+  noremap <Leader>af :Autoformat<CR>
+endif
