@@ -6,3 +6,6 @@ Plugin 'junegunn/rainbow_parentheses.vim', { 'for': ['lisp', 'clojure', 'scheme'
 
 " provides insert mode auto-completion for quotes, parens, brackets, etc.
 Plugin 'Raimondi/delimitMate'
+
+" vim8 async
+Plugin 'skywind3000/asyncrun.vim', { 'on': ['AsyncRun!', 'AsyncRun'] }
