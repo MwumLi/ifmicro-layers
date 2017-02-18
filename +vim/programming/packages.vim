@@ -9,3 +9,5 @@ Plugin 'Raimondi/delimitMate'
 
 " vim8 async
 Plugin 'skywind3000/asyncrun.vim', { 'on': ['AsyncRun!', 'AsyncRun'] }
+
+Plugin 'scrooloose/nerdcommenter', { 'on': '<Plug>NERDCommenterToggle' }

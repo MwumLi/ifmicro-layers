@@ -57,3 +57,13 @@ if layervim_core#PluginLoaded('skywind3000/asyncrun.vim')
     endfunction
 endif
 " }
+
+if layervim_core#PluginLoaded('scrooloose/nerdcommenter')
+  " Add spaces after comment delimiters by default
+  let g:NERDSpaceDelims = 1
+  " Add your own custom formats or override the defaults
+  " let g:NERDCustomDelimiters = { 'c': { 'left': '//'} }
+  nmap <Leader>;; <Plug>NERDCommenterToggle
+  omap <Leader>;; <Plug>NERDCommenterToggle
+  vmap <Leader>;; <Plug>NERDCommenterToggle
+endif
