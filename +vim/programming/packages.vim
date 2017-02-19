@@ -15,3 +15,6 @@ Plugin 'scrooloose/nerdcommenter', { 'on': '<Plug>NERDCommenterToggle' }
 
 " format your code
 Plugin 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
+
+" A collection of language packs for Vim.
+Plugin 'sheerun/vim-polyglot'

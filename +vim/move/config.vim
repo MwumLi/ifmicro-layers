@@ -5,8 +5,8 @@ if layervim_core#PluginLoaded('easymotion/vim-easymotion')
   " set motion prefix
   map <Leader>j <Plug>(easymotion-prefix)
 
-  " 替换默认搜索
-  map  / <Plug>(easymotion-sn)
+  " 全局搜索
+  map  <Leader>js <Plug>(easymotion-sn)
 
   " jump to single char
   map  <Leader>jc <Plug>(easymotion-bd-f)
