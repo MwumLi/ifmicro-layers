@@ -107,7 +107,8 @@ set backspace=indent,eol,start " Backspace for dummies
 " }
 
 " 断行设置 {
-  set textwidth=80            " 一行显示 80 字符
+  " diable textwidth to avoid auto wrap by \n
+  " set textwidth=80            " 一行显示 80 字符
   if exists('g:layervim_better_default_no_wrap') && g:layervim_better_default_no_wrap
     set nowrap
     set sidescroll=6          " 当光标达到水平极端时 移动的列数
