@@ -94,6 +94,9 @@ nnoremap <Leader>tp :setlocal paste!<CR>
   nnoremap <Leader>bl :blast<CR>
   nnoremap <Leader>bd :bd<CR>
   nnoremap <Leader>bk :bw<CR>
+  " Use Tab to switch buffer
+  nnoremap <Tab> :bn<CR>
+  nnoremap <S-Tab> :bp<CR>
 " }
 
 " https://github.com/ntpeters/vim-better-whitespace
