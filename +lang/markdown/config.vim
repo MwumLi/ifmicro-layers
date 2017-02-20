@@ -9,7 +9,7 @@ augroup LAYERVIM_MARKDOWN
     autocmd FileType markdown setlocal
                 \   wrap
 
-    if core_config#LayerLoaded('text-align')
+    if layervim_core#LayerLoaded('text-align')
         " Makrdown table align
         autocmd FileType markdown nnoremap <LocalLeader>ta :Tabularize /<Bar><CR>
     endif
