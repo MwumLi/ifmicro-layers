@@ -8,6 +8,10 @@
 麻雀虽小, 五脏俱全  
 如果你只想要一个最简单但用起来会不错的 vim, 那么你可以使用它  
 
+## Todo
+
+- [] undo
+
 ## Key Bindings  
 
 见 `keybindings.vim`  

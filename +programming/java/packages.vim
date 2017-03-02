@@ -1,7 +1,5 @@
 Plugin 'artur-shaik/vim-javacomplete2',  { 'on': [] }
 
-Plugin 'airblade/vim-rooter', { 'for': 'java' }
-
 " Load vim-javacomplete2 for java
 function! s:invoke_javacomplete()
     if &filetype ==# 'java'

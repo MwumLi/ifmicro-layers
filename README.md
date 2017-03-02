@@ -11,6 +11,16 @@ Layers for layer-vim
    * `basic` 主要提供一份基于 vim 的原生配置  
    * `theme` 主要是使用了 molokai 主题, 并对 statusLine 做了一些定制  
 
+
++vim
++lang
++programming
+  basic
+	fe
+
++writing
+  markdown
+
 ## 参考链接
 
 * [vim-Operator-Pending 映射

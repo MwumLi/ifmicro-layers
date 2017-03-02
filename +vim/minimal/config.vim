@@ -194,6 +194,21 @@ if has('gui_running')
   set visualbell t_vb=
 endif
 
+" http://stackoverflow.com/questions/5933568/disable-blinking-at-the-first-last-line-of-the-file
+autocmd GUIEnter * set t_vb=
+
+" set en_US as default
+if !layervim_core#LayerLoaded('chinese')
+  silent! set $LANG = 'en_US'
+  silent! let langmenu=en_US
+  source $VIMRUNTIME/delmenu.vim
+  source $VIMRUNTIME/menu.vim
+
+  if g:WINDOWS
+      set guifont=Consolas:h13
+  endif
+endif
+
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/autocmd.vim'
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/keybindings.vim'
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/colors.vim'

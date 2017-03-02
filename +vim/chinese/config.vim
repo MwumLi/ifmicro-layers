@@ -1,10 +1,11 @@
 scriptencoding utf-8
 
-if g:spacevim_gui_running
+if g:layervim_gui_running
 
     " 解决菜单栏乱码
-    let $LANG = 'zh_CN.UTF-8'
-    set langmenu=zh_CN
+    silent! let $LANG = 'zh_CN.UTF-8'
+    silent! set langmenu=zh_CN
+
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
 

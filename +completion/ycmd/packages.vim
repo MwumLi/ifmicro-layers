@@ -18,6 +18,7 @@ function! s:invoke_ycm()
     let l:cur_ft = &filetype
     if index(l:supported, l:cur_ft) > -1
         call plug#load('YouCompleteMe')
+        call plug#load('SirVer/ultisnips')
     endif
 endfunction
 
@@ -26,7 +27,7 @@ augroup LOAD_YCM
     autocmd InsertEnter * call s:invoke_ycm()
 augroup END
 
-Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips', { 'on': [] } 
 Plugin 'honza/vim-snippets'
 
 

@@ -2,6 +2,7 @@ scriptencoding utf-8
 
 " YouCompleteMe {
     let g:ycm_global_ycm_extra_conf = fnamemodify(expand('<sfile>'), ':h') . '/global_conf.py'
+    " let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     let g:ycm_error_symbol='✖'
     let g:ycm_warning_symbol='⚠ '
     " ycm_path_to_python_interpreter is important!
@@ -28,6 +29,7 @@ scriptencoding utf-8
                 \   'haskell' : ['.', 're!.'],
                 \   'scss,css': [ 're!^\s{2,4}', 're!:\s+' ],
                 \ }
+    let g:ycm_filetype_whitelist = { '*': 1 }
     let g:ycm_filetype_blacklist={
                 \   'tagbar' : 1,
                 \   'nerdtree' : 1,

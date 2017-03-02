@@ -2,6 +2,7 @@ scriptencoding=utf-8
 
 " vim-airline {
     let g:airline_theme='simple'
+    " let g:airline_theme='violet'
     let g:Powerline_symbols='fancy'
     let g:airline_powerline_fonts=1
     let g:airline#extensions#tabline#enabled=1

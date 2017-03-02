@@ -73,3 +73,9 @@ if layervim_core#PluginLoaded('Chiel92/vim-autoformat')
   let g:autoformat_autoindent = 0
   noremap <Leader>af :Autoformat<CR>
 endif
+
+if layervim_core#PluginLoaded('mattn/emmet-vim')
+  let g:user_emmet_mode='inv'
+  " default C-y, so press '<c-y>,'
+  let g:user_emmet_leader_key='<C-x>'
+endif
