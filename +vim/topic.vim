@@ -1,4 +1,5 @@
 Layer '+vim/minimal'
+Layer '+vim/startup'
 Layer '+vim/visual'
 Layer '+vim/fileManage'
 Layer '+vim/edit'
